@@ -1,0 +1,95 @@
+/* =====================================================================
+   NAMIKO – hero sekcijos variantai (palyginimui). Naudoja style.css žetonus.
+   ===================================================================== */
+
+/* ---------- Žymos tarp variantų ---------- */
+.hv-label{background:var(--ink);color:#fff;padding:14px 0}
+.hv-label .container{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+.hv-label b{font-size:.9375rem;letter-spacing:.02em}
+.hv-label span{font-size:.8125rem;color:rgba(255,255,255,.72)}
+.hv-intro{background:#fff;border-bottom:1px solid var(--line-2)}
+.hv-intro .container{padding-block:28px;display:grid;gap:8px}
+.hv-intro p{color:var(--ink-2);max-width:70ch}
+
+/* ---------- V1: XStore karuselė ---------- */
+.hv1{position:relative;background:var(--cream);border-bottom:1px solid var(--line-2);overflow:hidden}
+.hv1-track{display:grid}
+.hv1-slide{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .55s var(--ease),visibility 0s linear .55s}
+.hv1-slide.is-active{opacity:1;visibility:visible;transition:opacity .55s var(--ease)}
+.hv1-slide .container{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,72px);align-items:center;padding-block:clamp(40px,6vw,72px) clamp(72px,8vw,104px)}
+.hv1-slide--green{background:#E6EFDF}
+.hv1-slide--honey{background:#F8ECC8}
+.hv1-promo{display:flex;flex-direction:column;gap:18px;max-width:560px}
+.hv1-promo .h1{font-size:clamp(1.9rem,4vw,3.1rem)}
+.hv1-price{display:flex;align-items:baseline;gap:12px}
+.hv1-price .price{font-size:clamp(2.2rem,4vw,3rem);letter-spacing:-.03em}
+.hv1-price .price-old{font-size:1.25rem}
+.hv1-promo ul{display:grid;gap:8px;font-size:.9375rem;color:var(--ink-2)}
+.hv1-promo li{display:flex;gap:10px;align-items:flex-start}
+.hv1-promo li .icon{width:18px;height:18px;color:var(--green);margin-top:3px;flex:none}
+.hv1-arrow{position:absolute;top:50%;z-index:3;width:48px;height:48px;margin-top:-24px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;box-shadow:var(--shadow-sm);transition:background .2s,color .2s,border-color .2s}
+.hv1-arrow:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.hv1-arrow .icon{width:20px;height:20px}
+.hv1-arrow--prev{left:clamp(12px,2vw,28px)}
+.hv1-arrow--next{right:clamp(12px,2vw,28px)}
+.hv1-dots{position:absolute;left:50%;bottom:26px;z-index:3;display:flex;gap:8px;transform:translateX(-50%)}
+.hv1-dot{width:8px;height:8px;border-radius:999px;background:rgba(23,26,23,.25);transition:width .3s var(--ease),background .3s}
+.hv1-dot[aria-current="true"]{width:26px;background:var(--ink)}
+.hv1-counter{position:absolute;right:clamp(16px,2.5vw,36px);bottom:24px;z-index:3;font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--ink-3)}
+@media (max-width:960px){
+  .hv1-slide .container{grid-template-columns:minmax(0,1fr);padding-bottom:72px}
+  .hv1-slide .hero-visual{order:-1;max-width:none;justify-self:stretch;aspect-ratio:4/3}
+  .hv1-arrow{display:none}
+}
+
+/* ---------- V2: skonio pasirinkimas ---------- */
+.hv2{background:#fff;border-bottom:1px solid var(--line-2)}
+.hv2 .container{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(40px,6vw,72px)}
+.hv2-check{display:grid;gap:10px;font-size:.9375rem}
+.hv2-check li{display:flex;gap:10px;align-items:flex-start}
+.hv2-check .icon{width:18px;height:18px;color:var(--green);margin-top:3px;flex:none}
+.hv2-check b{font-weight:700}
+.hv2-picker{display:grid;gap:14px}
+.hv2-stage{position:relative;aspect-ratio:5/4;border-radius:var(--r-xl);background:var(--cream);border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.hv2-stage::before{content:"";position:absolute;width:62%;aspect-ratio:1;border-radius:50%;background:var(--green-50)}
+.hv2-stage img{position:relative;width:auto;height:84%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(23,26,23,.16));transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.hv2-stage.is-switching img{opacity:0;transform:translateY(8px)}
+.hv2-stage .badge{position:absolute;top:14px;left:14px}
+.hv2-info{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:16px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r-lg);background:#fff}
+.hv2-info b{display:block;font-size:1.0625rem;letter-spacing:-.01em}
+.hv2-info small{display:block;font-size:.8125rem;color:var(--ink-3);margin-top:2px}
+.hv2-info .price{font-size:1.5rem}
+.hv2-chips{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.hv2-chip{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px 9px;border:1.5px solid var(--line);border-radius:var(--r-lg);background:#fff;font-size:.75rem;font-weight:700;line-height:1.1;text-align:center;transition:border-color .2s,background .2s}
+.hv2-chip img{width:36px;height:48px;object-fit:contain}
+.hv2-chip:hover{border-color:#C9C4B8}
+.hv2-chip[aria-selected="true"]{border-color:var(--green);background:var(--green-50)}
+.hv2-chip small{display:block;font-weight:500;color:var(--ink-3);font-size:.6875rem}
+@media (max-width:960px){.hv2 .container{grid-template-columns:minmax(0,1fr)}.hv2-picker{order:-1}.hv2-stage{aspect-ratio:4/3}}
+@media (max-width:560px){.hv2-info{grid-template-columns:minmax(0,1fr) auto}.hv2-info .btn{grid-column:1/-1}.hv2-chips{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.hv2-chip{padding:8px 2px;font-size:.6875rem}.hv2-chip img{width:28px;height:38px}}
+
+/* ---------- V3: įkūrėjas – tamsus tekstas kairėje, nuotrauka dešinėje ---------- */
+.hv3{position:relative;display:grid;grid-template-columns:minmax(0,46%) minmax(0,1fr);min-height:min(640px,78vh);background:var(--ink);color:#fff;overflow:hidden}
+.hv3-media{position:relative;min-height:320px}
+.hv3-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 40%}
+.hv3-overlay{position:absolute;inset:0 auto 0 0;width:22%;background:linear-gradient(90deg,var(--ink) 0%,rgba(23,26,23,0) 100%);pointer-events:none}
+.hv3-content{display:flex;flex-direction:column;justify-content:center;gap:22px;padding:clamp(40px,6vw,80px) clamp(28px,4vw,56px) clamp(40px,6vw,80px) var(--gutter)}
+.hv3-content .h1{font-size:clamp(2rem,3.6vw,3.1rem)}
+.hv3 .eyebrow{color:var(--honey)}
+.hv3 .h1{color:#fff}
+.hv3 .lead{color:rgba(255,255,255,.84)}
+.hv3 .btn-outline{--fg:#fff;--bd:rgba(255,255,255,.55)}
+.hv3 .btn-outline:hover{--bg:#fff;--fg:var(--ink);--bd:#fff}
+.hv3-facts{display:flex;flex-wrap:wrap;gap:10px 22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-size:.875rem;color:rgba(255,255,255,.92)}
+.hv3-facts li{display:inline-flex;align-items:center;gap:8px}
+.hv3-facts .icon{width:18px;height:18px;color:var(--honey)}
+.hv3-caption{position:absolute;right:18px;bottom:14px;padding:6px 10px;border-radius:var(--r);background:rgba(23,26,23,.72);font-size:.75rem;color:rgba(255,255,255,.85)}
+.hv3-caption b{color:#fff}
+@media (min-width:1400px){.hv3-content{padding-left:max(var(--gutter),calc((100vw - var(--container)) / 2 + var(--gutter)))}}
+@media (max-width:860px){
+  .hv3{grid-template-columns:minmax(0,1fr);min-height:0}
+  .hv3-media{order:-1;min-height:0;height:260px}
+  .hv3-bg{object-position:center 35%}
+  .hv3-overlay{display:none}
+  .hv3-content{padding:28px var(--gutter) 40px}
+}

@@ -2,6 +2,8 @@
 
 **Gyva peržiūra (GitHub Pages):** https://arvydastry.github.io/namiko/ · prekė: https://arvydastry.github.io/namiko/preke.html · pirkimas: https://arvydastry.github.io/namiko/pirkimas.html
 
+**Hero variantai palyginimui:** https://arvydastry.github.io/namiko/hero-variantai.html (V1 XStore karuselė, V2 skonio pasirinkimas, V3 įkūrėjo nuotrauka) – failai `src/pages/hero-variantai.html`, `assets/css/hero-variants.css`, `assets/js/hero-variants.js`.
+
 Statinis, naršyklėje atidaromas dizaino prototipas namiko.lt perdarymui. Trys puslapiai:
 
 | Failas | Puslapis |
