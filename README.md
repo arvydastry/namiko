@@ -31,7 +31,8 @@ Esama svetainė (Astra + Elementor, pilkas hero, tamsiai žalia) neatsako į du 
 5. **Dvi reklaminės juostos** – rinkinys PRADEDANTIESIEMS (17 € vietoj 18 €) ir avižų 6×0,75 l (49 € vietoj 54 €).
 6. **Kodėl NAMIKO** – 6 argumentai + Ramūno nuotrauka su visa linija (nuotrauka iš namiko.lt).
 7. **Rinkiniai** – 4 kortelės su kaina už buteliuką ir sutaupymu (duomenys iš namiko.lt).
-8. **Atsiliepimai, DUK, naujienlaiškis, poraštė su rekvizitais.**
+8. **„Padovanok sveikatą artimajam“ – dovanų prenumerata.** Konfigūratorius: rinkinys (PRADEDANTIESIEMS 17 €, KLASIKA 25 €, ŠEIMAI 44 € per mėn.) + trukmė (3 / 6 / 12 mėn. su −5 / −10 / −15 % nuolaida) → kaina per mėnesį, nuolaida ir bendra suma; CTA veda į `pirkimas.html?gift=<rinkinys>&months=<n>`, kur santrauka rodo prenumeratos eilutę, o kontaktų kortelėje atsiranda „Dovanos gavėjas“ (vardas, telefonas, palinkėjimas kortelėje, pirmo siuntinio data).
+9. **Atsiliepimai, DUK, naujienlaiškis, poraštė su rekvizitais.**
 
 Prekės puslapis: galerija su miniatiūromis, kaina + „≈ 0,30 € per dieną“, 4 pagrindiniai argumentai, **kiekio pasirinkimas 1 / 3 / 6 buteliukai** (3× ir 6× – tikros rinkinių kainos 25 € ir 49 €), „Į krepšelį“ + „Pirkti dabar“ (tiesiai į apmokėjimą), pristatymo/grąžinimo blokas, „Dažnai perkama kartu“ (= rinkinys KLASIKA 25 €), skirtukai (aprašymas, sudėtis ir maistinė vertė, vartojimas ir laikymas, tyrimai, atsiliepimai), susijusios prekės, **lipni „į krepšelį“ juosta** slenkant žemyn.
 
@@ -70,7 +71,7 @@ Redaguojant antraštę ar poraštę keiskite `src/partials/` ir paleiskite `pyth
 - Atsiliepimų citatos – sutrumpintos ištraukos iš namiko.lt „Atsiliepimai“; vardai sutrumpinti.
 - Pristatymo kainos ir terminai (2,99 € / 4,99 €, 1–2 d. d.) ir paštomatų sąrašas – pavyzdiniai.
 - Užsakymo numeris patvirtinimo žingsnyje, bankų sąrašas prie el. bankininkystės.
-- Prenumerata kas mėnesį (privalumų juosta) – pasiūlymas; nuolaidos dydį ir sąlygas reikia nuspręsti (WooCommerce Subscriptions ar pan.).
+- Dovanų prenumerata: nuolaidos 5 / 10 / 15 % pagal trukmę ir „apmokėjimas iš karto už visą laikotarpį“ – pasiūlymas, sąlygas reikia nuspręsti (WooCommerce Subscriptions arba All Products for Subscriptions; XStore su jais suderinamas).
 - Krepšelis veikia tik kaip demonstracija (localStorage), paieška ir nuorodos „Paskyra“, „Prisijungti“, taisyklės – be funkcijos.
 
 Prekių pavadinimai, kainos, akcijos, rinkinių sudėtis, maistinė vertė, sudėtis, vartojimo ir laikymo instrukcijos, rekvizitai – tikri, paimti iš namiko.lt (2026-11-02).

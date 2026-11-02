@@ -144,10 +144,11 @@ ul{margin:0;padding:0;list-style:none}
 .nav{border-top:1px solid var(--line-2)}
 .nav .container{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:50px}
 .nav-list{display:flex;align-items:center;gap:4px}
-.nav-list a{display:inline-flex;align-items:center;gap:.4rem;padding:12px 14px;font-size:.875rem;font-weight:600;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav-list a{display:inline-flex;align-items:center;gap:.4rem;padding:12px 13px;font-size:.875rem;font-weight:600;white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 .nav-list a:hover,.nav-list a.is-active{color:var(--green);border-bottom-color:var(--green)}
 .nav-list .icon{width:.9em;height:.9em;opacity:.6}
-.nav-cta{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:700;color:var(--green)}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:700;color:var(--green);white-space:nowrap}
+@media (max-width:1240px){.nav-cta{display:none}.nav-list a{padding:12px 11px}}
 .nav-cta .icon{color:var(--honey)}
 @media (max-width:960px){
   .header-main{grid-template-columns:auto 1fr auto;min-height:68px}
@@ -369,6 +370,52 @@ html.no-js .marquee-track{animation:none}
 .set .btn{margin-top:auto}
 @media (max-width:1100px){.sets{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.sets{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- Dovanų prenumerata „Padovanok sveikatą artimajam“ ---------- */
+.gift{background:#FBF5E6;border-block:1px solid #F1E6CF}
+.gift-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:clamp(24px,5vw,72px);align-items:start}
+.gift-copy{display:flex;flex-direction:column;gap:18px;padding-top:8px}
+.gift-copy .h2{max-width:16ch}
+.gift-points{display:grid;gap:12px;font-size:.9375rem}
+.gift-points li{display:flex;gap:12px;align-items:flex-start}
+.gift-points .icon{width:22px;height:22px;color:var(--green);flex:none;margin-top:1px}
+.gift-points span{color:var(--ink-2)}
+.gift-points b{color:var(--ink)}
+.gift-box{display:grid;gap:18px;padding:clamp(18px,3vw,28px);background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);box-shadow:var(--shadow)}
+.gift-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px}
+.gift-head b{font-size:1.125rem;letter-spacing:-.01em}
+.gift-fieldset{border:0;padding:0;margin:0;display:grid;gap:8px}
+.gift-fieldset legend{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.gift-option{position:relative;display:grid;grid-template-columns:auto 48px minmax(0,1fr) auto;align-items:center;gap:12px;padding:10px 14px 10px 12px;border:1.5px solid var(--line);border-radius:var(--r-lg);background:#fff;cursor:pointer;transition:border-color .2s,background .2s}
+.gift-option:hover{border-color:#C9C4B8}
+.gift-option input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.gift-option img{width:48px;height:48px;object-fit:contain}
+.gift-option b{display:block;font-size:.9375rem}
+.gift-option small{display:block;font-size:.8125rem;color:var(--ink-2)}
+.gift-option:has(input:checked){border-color:var(--green);background:var(--green-50)}
+.gift-option:has(input:checked) .option-radio{border-color:var(--green)}
+.gift-option:has(input:checked) .option-radio::after{transform:scale(1)}
+.gift-option .option-price small{color:var(--ink-3);font-weight:500}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.seg label{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 8px;border:1.5px solid var(--line);border-radius:var(--r-lg);background:#fff;cursor:pointer;transition:border-color .2s,background .2s}
+.seg label:hover{border-color:#C9C4B8}
+.seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.seg b{font-size:.9375rem}
+.seg small{font-size:.75rem;font-weight:700;color:var(--green-700)}
+.seg label:has(input:checked){border-color:var(--green);background:var(--green-50)}
+.gift-summary{display:grid;gap:8px;padding:14px 16px;border:1px dashed var(--line);border-radius:var(--r-lg);background:#FBF9F4;font-size:.9375rem}
+.gift-summary div{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.gift-summary span{color:var(--ink-2)}
+.gift-total{padding-top:10px;margin-top:2px;border-top:1px solid var(--line)}
+.gift-total span{color:var(--ink);font-weight:600}
+.gift-total b{font-size:1.5rem;letter-spacing:-.02em}
+.gift-box .secure{justify-content:flex-start}
+@media (max-width:960px){.gift-grid{grid-template-columns:minmax(0,1fr)}.gift-copy .h2{max-width:none}}
+@media (max-width:520px){.gift-option{grid-template-columns:auto minmax(0,1fr) auto;padding:10px 12px}.gift-option img{display:none}}
+
+.gift-recipient{border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 18px 18px;margin-top:18px;background:#FBF9F4}
+.gift-recipient legend{display:inline-flex;align-items:center;gap:8px;padding:0 6px;font-size:.9375rem;font-weight:700}
+.gift-recipient legend .icon{width:18px;height:18px;color:var(--green)}
 
 /* ---------- Atsiliepimai ---------- */
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}

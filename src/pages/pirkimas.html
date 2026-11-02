@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=12">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 </head>
 <body style="background:#FBFAF7">
 {{sprite}}
@@ -42,6 +42,15 @@
             <div class="field"><label for="lname">Pavardė</label><input id="lname" type="text" name="lname" autocomplete="family-name" required></div>
             <label class="check full"><input type="checkbox" name="news"> Noriu gauti NAMIKO virtuvės receptus ir akcijas el. paštu</label>
           </div>
+          <fieldset class="gift-recipient" data-gift-only hidden>
+            <legend><svg class="icon"><use href="#i-gift"></use></svg>Dovanos gavėjas</legend>
+            <div class="form-grid">
+              <div class="field"><label for="rname">Gavėjo vardas, pavardė</label><input id="rname" type="text" name="rname" data-required></div>
+              <div class="field"><label for="rphone">Gavėjo telefonas <small>(paštomato SMS)</small></label><input id="rphone" type="tel" name="rphone" placeholder="+370" data-required></div>
+              <div class="field full"><label for="wish">Palinkėjimas dovanų kortelėje <small>(iki 200 ženklų)</small></label><textarea id="wish" name="wish" maxlength="200" placeholder="Pvz., Sveikatos ir energijos kiekvienai dienai! – Jonas"></textarea></div>
+              <div class="field full"><label for="start">Pirmo siuntinio data</label><input id="start" type="date" name="start"><span class="hint">Kitus siuntinius siųsime kas mėnesį tą pačią dieną.</span></div>
+            </div>
+          </fieldset>
         </div>
 
         <div class="card reveal" data-delay="1">
@@ -144,10 +153,15 @@
       <!-- ============ Užsakymo santrauka ============ -->
       <aside class="summary reveal" data-delay="1" data-checkout-side aria-label="Užsakymo santrauka">
         <div class="summary-head">
-          <h2>Jūsų užsakymas</h2>
+          <h2 data-summary-title>Jūsų užsakymas</h2>
           <a href="index.html#prekes">Pridėti daugiau</a>
         </div>
         <div class="summary-items">
+          <div class="sitem" data-line data-gift-line data-price="0" hidden>
+            <div class="sitem-img"><img src="assets/img/klasika2.png" alt="" width="1024" height="1024"><span class="count"><svg class="icon" style="width:11px;height:11px"><use href="#i-gift"></use></svg></span></div>
+            <div><b data-gift-name>Dovanų prenumerata</b><span data-gift-desc></span></div>
+            <div class="sitem-price"><span data-line-total>0,00 €</span><small data-line-old></small></div>
+          </div>
           <div class="sitem" data-line data-price="9">
             <div class="sitem-img"><img src="assets/img/avizu2.png" alt="" width="1024" height="1024"><span class="count" data-line-count>2</span></div>
             <div>
@@ -177,7 +191,7 @@
         </details>
         <div class="totals">
           <div><span>Prekės</span><span data-subtotal>35,00 €</span></div>
-          <div data-discount-line><span>Rinkinio nuolaida</span><span class="free" data-discount>−1,00 €</span></div>
+          <div data-discount-line><span data-discount-label>Rinkinio nuolaida</span><span class="free" data-discount>−1,00 €</span></div>
           <div><span>Pristatymas</span><span class="free" data-shipping>Nemokamas</span></div>
           <div class="grand"><span>Iš viso <small>su PVM</small></span><span data-total>35,00 €</span></div>
         </div>
@@ -213,6 +227,6 @@
 </main>
 
 <div class="toast" data-toast role="status" aria-live="polite"><svg class="icon"><use href="#i-check"></use></svg><span data-toast-text></span></div>
-<script src="assets/js/main.js?v=12" defer></script>
+<script src="assets/js/main.js?v=13" defer></script>
 </body>
 </html>

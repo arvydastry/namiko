@@ -187,6 +187,23 @@
     show(0); play();
   });
 
+  /* ---------- Dovanų prenumeratos konfigūratorius ---------- */
+  d.querySelectorAll('[data-gift-config]').forEach(function (f) {
+    var upd = function () {
+      var set = f.querySelector('input[name="gift-set"]:checked'), m = f.querySelector('input[name="gift-months"]:checked');
+      if (!set || !m) return;
+      var price = parseFloat(set.getAttribute('data-price')), months = parseInt(m.value, 10), disc = parseFloat(m.getAttribute('data-discount'));
+      var monthly = price * (1 - disc), total = monthly * months;
+      f.querySelector('[data-gift-monthly]').textContent = fmt(monthly);
+      f.querySelector('[data-gift-discount]').textContent = '−' + fmt(price * months * disc);
+      f.querySelector('[data-gift-months]').textContent = months;
+      f.querySelector('[data-gift-total]').textContent = fmt(total);
+      var cta = f.querySelector('[data-gift-cta]');
+      if (cta) cta.setAttribute('href', 'pirkimas.html?gift=' + set.value + '&months=' + months);
+    };
+    f.addEventListener('change', upd); upd();
+  });
+
   /* ---------- Judanti privalumų juosta (marquee) ---------- */
   d.querySelectorAll('[data-marquee]').forEach(function (m) {
     var track = m.querySelector('.marquee-track'), list = track && track.querySelector('.usp-list');
@@ -221,13 +238,16 @@
     var calc = function () {
       var sub = 0, oldSum = 0, count = 0;
       co.querySelectorAll('[data-line]').forEach(function (li) {
-        var q = parseInt(li.querySelector('.qty input').value, 10) || 1;
+        if (li.hidden) return;
+        var qi = li.querySelector('.qty input');
+        var q = qi ? (parseInt(qi.value, 10) || 1) : 1;
         var p = parseFloat(li.getAttribute('data-price')), o = parseFloat(li.getAttribute('data-old') || li.getAttribute('data-price'));
         sub += p * q; oldSum += o * q; count += q;
         li.querySelector('[data-line-total]').textContent = fmt(p * q);
         var ot = li.querySelector('[data-line-old]');
         if (ot) ot.textContent = o > p ? fmt(o * q) : '';
-        li.querySelector('[data-line-count]').textContent = q;
+        var lc = li.querySelector('[data-line-count]');
+        if (lc) lc.textContent = q;
       });
       var free = sub >= FREE;
       var ship = co.querySelector('input[name="ship"]:checked');
@@ -253,6 +273,25 @@
       d.querySelectorAll('[data-cart-total]').forEach(function (el) { el.textContent = fmt(sub); });
       store.set({ count: count, total: +sub.toFixed(2) });
     };
+    /* Dovanų prenumerata: pirkimas.html?gift=klasika&months=6 */
+    var GIFT = { pradedantiesiems: { name: 'PRADEDANTIESIEMS, 2 × 0,75 l', price: 17, img: 'assets/img/pradedanciuju-new.png' }, klasika: { name: 'KLASIKA, 3 × 0,75 l', price: 25, img: 'assets/img/klasika2.png' }, seimai: { name: 'ŠEIMAI, 5 × 0,75 l', price: 44, img: 'assets/img/seimos2-1.png' } };
+    var DISC = { 3: 0.05, 6: 0.10, 12: 0.15 };
+    var params = new URLSearchParams(location.search), g = GIFT[params.get('gift')], months = parseInt(params.get('months'), 10);
+    var giftLine = co.querySelector('[data-gift-line]');
+    if (g && DISC[months] && giftLine) {
+      var monthly = g.price * (1 - DISC[months]), total = monthly * months;
+      co.querySelectorAll('[data-line]:not([data-gift-line])').forEach(function (li) { li.remove(); });
+      giftLine.hidden = false;
+      giftLine.setAttribute('data-price', total.toFixed(2));
+      giftLine.setAttribute('data-old', (g.price * months).toFixed(2));
+      giftLine.querySelector('[data-gift-name]').textContent = 'Dovanų prenumerata · ' + g.name;
+      giftLine.querySelector('[data-gift-desc]').textContent = months + ' mėn. × ' + fmt(monthly) + '/mėn. · siuntinys kas mėnesį, pristatymas nemokamas';
+      giftLine.querySelector('img').src = g.img;
+      co.querySelectorAll('[data-gift-only]').forEach(function (el) { el.hidden = false; });
+      co.querySelectorAll('[data-gift-only] input, [data-gift-only] textarea').forEach(function (el) { if (el.hasAttribute('data-required')) el.required = true; });
+      var dl = co.querySelector('[data-discount-label]'); if (dl) dl.textContent = 'Prenumeratos nuolaida';
+      var sh = co.querySelector('[data-summary-title]'); if (sh) sh.textContent = 'Jūsų dovana';
+    }
     co.addEventListener('change', calc);
     co.addEventListener('input', calc);
     co.querySelectorAll('[data-remove]').forEach(function (b) { b.addEventListener('click', function () { b.closest('[data-line]').remove(); calc(); }); });

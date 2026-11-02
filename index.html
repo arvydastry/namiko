@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=12">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 <link rel="preload" as="image" href="assets/img/pradedanciuju-new.png" fetchpriority="high">
 </head>
 <body class="has-mobile-cta">
@@ -119,10 +119,10 @@
         <li><a href="index.html#prekes">Parduotuvė <svg class="icon"><use href="#i-chev"></use></svg></a></li>
         <li><a href="index.html#rinkiniai">Rinkiniai</a></li>
         <li><a href="index.html#rinkiniai">Akcijos <span class="badge badge-hot">Hot</span></a></li>
+        <li><a href="index.html#dovana">Dovanos</a></li>
         <li><a href="index.html#kaip-vartoti">Kaip vartoti</a></li>
         <li><a href="index.html#nauda">Nauda</a></li>
         <li><a href="index.html#atsiliepimai">Atsiliepimai</a></li>
-        <li><a href="index.html#duk">DUK</a></li>
         <li><a href="#kontaktai">Kontaktai</a></li>
       </ul>
       <a class="nav-cta" href="tel:+37063201064"><svg class="icon"><use href="#i-phone"></use></svg>Užsakymai telefonu: +370 632 01064</a>
@@ -139,6 +139,7 @@
     <a href="index.html">Pradžia <svg class="icon"><use href="#i-chev-r"></use></svg></a>
     <a href="index.html#prekes">Parduotuvė <svg class="icon"><use href="#i-chev-r"></use></svg></a>
     <a href="index.html#rinkiniai">Rinkiniai ir akcijos <svg class="icon"><use href="#i-chev-r"></use></svg></a>
+    <a href="index.html#dovana">Dovanų prenumerata <svg class="icon"><use href="#i-chev-r"></use></svg></a>
     <a href="index.html#kaip-vartoti">Kaip vartoti <svg class="icon"><use href="#i-chev-r"></use></svg></a>
     <a href="index.html#nauda">Nauda <svg class="icon"><use href="#i-chev-r"></use></svg></a>
     <a href="index.html#atsiliepimai">Atsiliepimai <svg class="icon"><use href="#i-chev-r"></use></svg></a>
@@ -248,7 +249,7 @@
           </li>
           <li class="usp-item">
             <span class="usp-icon"><svg class="icon"><use href="#i-repeat"></use></svg></span>
-            <div><b>Prenumerata kas mėnesį</b><span>Su nuolaida, bet kada sustabdoma · <a href="preke.html">užsisakyti</a></span></div>
+            <div><b>Prenumerata kas mėnesį</b><span>Su nuolaida, bet kada sustabdoma · <a href="#dovana">padovanoti artimajam</a></span></div>
           </li>
           <li class="usp-item">
             <span class="usp-icon"><svg class="icon"><use href="#i-truck"></use></svg></span>
@@ -559,6 +560,68 @@
     </div>
   </section>
 
+  <!-- ============ Padovanok sveikatą artimajam – dovanų prenumerata ============ -->
+  <section class="section gift" id="dovana" aria-labelledby="gift-title">
+    <div class="container gift-grid">
+      <div class="gift-copy reveal">
+        <span class="eyebrow">Dovanų prenumerata</span>
+        <h2 class="h2" id="gift-title">Padovanok sveikatą artimajam</h2>
+        <p class="lead">Pasirinktas NAMIKO rinkinys kas mėnesį atkeliauja tiesiai jūsų artimajam – su dovanų kortele ir jūsų palinkėjimu. Jūs sumokate iš karto, o gavėjas kiekvieną mėnesį gauna šviežią siuntinį.</p>
+        <ul class="gift-points">
+          <li><svg class="icon"><use href="#i-gift"></use></svg><span><b>Dovanų kortelė su jūsų palinkėjimu</b> – įdedame į pirmą siuntinį nemokamai.</span></li>
+          <li><svg class="icon"><use href="#i-truck"></use></svg><span><b>Nemokamas pristatymas kiekvieną mėnesį</b> – į paštomatą ar kurjeriu, gavėjui patogiu laiku.</span></li>
+          <li><svg class="icon"><use href="#i-repeat"></use></svg><span><b>Be įsipareigojimų</b> – prenumeratą galite pristabdyti, pakeisti skonius ar atšaukti bet kada.</span></li>
+          <li><svg class="icon"><use href="#i-badge-percent"></use></svg><span><b>Kuo ilgiau – tuo pigiau:</b> 3 mėn. −5 %, 6 mėn. −10 %, 12 mėn. −15 %.</span></li>
+        </ul>
+        <p class="muted" style="font-size:.8125rem">Norite kitokio rinkinio ar skonių derinio? Skambinkite <a href="tel:+37063201064" style="text-decoration:underline">+370 632 01064</a> – sudarysime individualią dovaną.</p>
+      </div>
+      <!-- DEMO DUOMENYS: prenumeratos nuolaidos (5 / 10 / 15 %) – pasiūlymas, suderinti su NAMIKO -->
+      <form class="gift-box reveal" data-delay="1" data-gift-config onsubmit="return false">
+        <div class="gift-head"><b>Sudarykite dovaną</b><span class="badge badge-soft">Pristatymas nemokamas</span></div>
+        <fieldset class="gift-fieldset">
+          <legend>1. Pasirinkite rinkinį</legend>
+          <label class="gift-option">
+            <input type="radio" name="gift-set" value="pradedantiesiems" data-price="17" data-name="PRADEDANTIESIEMS, 2 × 0,75 l" checked>
+            <span class="option-radio" aria-hidden="true"></span>
+            <img src="assets/img/pradedanciuju-new.png" alt="" width="1024" height="1024" loading="lazy">
+            <span><b>PRADEDANTIESIEMS</b><small>2 × 0,75 l · avižų + medaus</small></span>
+            <span class="option-price">17,00 €<small>per mėn.</small></span>
+          </label>
+          <label class="gift-option">
+            <input type="radio" name="gift-set" value="klasika" data-price="25" data-name="KLASIKA, 3 × 0,75 l">
+            <span class="option-radio" aria-hidden="true"></span>
+            <img src="assets/img/klasika2.png" alt="" width="1024" height="1024" loading="lazy">
+            <span><b>KLASIKA</b><small>3 × 0,75 l · avižų + grikių + ryžių</small></span>
+            <span class="option-price">25,00 €<small>per mėn.</small></span>
+          </label>
+          <label class="gift-option">
+            <input type="radio" name="gift-set" value="seimai" data-price="44" data-name="ŠEIMAI, 5 × 0,75 l">
+            <span class="option-radio" aria-hidden="true"></span>
+            <img src="assets/img/seimos2-1.png" alt="" width="1024" height="1024" loading="lazy">
+            <span><b>ŠEIMAI</b><small>5 × 0,75 l · penki skirtingi skoniai</small></span>
+            <span class="option-price">44,00 €<small>per mėn.</small></span>
+          </label>
+        </fieldset>
+        <fieldset class="gift-fieldset">
+          <legend>2. Prenumeratos trukmė</legend>
+          <div class="seg">
+            <label><input type="radio" name="gift-months" value="3" data-discount="0.05"><b>3 mėn.</b><small>−5 %</small></label>
+            <label><input type="radio" name="gift-months" value="6" data-discount="0.10" checked><b>6 mėn.</b><small>−10 %</small></label>
+            <label><input type="radio" name="gift-months" value="12" data-discount="0.15"><b>12 mėn.</b><small>−15 %</small></label>
+          </div>
+        </fieldset>
+        <div class="gift-summary">
+          <div><span>Kas mėnesį</span><b data-gift-monthly>15,30 €</b></div>
+          <div><span>Prenumeratos nuolaida</span><b class="price-sale" data-gift-discount>−10,20 €</b></div>
+          <div><span>Pristatymas kiekvieną mėnesį</span><b class="price-sale">Nemokamas</b></div>
+          <div class="gift-total"><span>Iš viso už <span data-gift-months>6</span> mėn.</span><b data-gift-total>91,80 €</b></div>
+        </div>
+        <a class="btn btn-primary btn-lg btn-block" href="pirkimas.html?gift=pradedantiesiems&amp;months=6" data-gift-cta><svg class="icon"><use href="#i-gift"></use></svg>Užsakyti dovanų prenumeratą</a>
+        <p class="secure"><svg class="icon"><use href="#i-lock"></use></svg>Gavėjo adresą ir palinkėjimą įrašysite kitame žingsnyje.</p>
+      </form>
+    </div>
+  </section>
+
   <!-- ============ Atsiliepimai ============ -->
   <section class="section section-cream" id="atsiliepimai" aria-labelledby="rev-title">
     <div class="container">
@@ -674,6 +737,7 @@
           <li><a href="index.html#prekes">Visi koncentratai</a></li>
           <li><a href="index.html#rinkiniai">Rinkiniai</a></li>
           <li><a href="index.html#rinkiniai">Produktų akcijos</a></li>
+          <li><a href="index.html#dovana">Dovanų prenumerata</a></li>
           <li><a href="preke.html">Avižų gėrimo koncentratas</a></li>
           <li><a href="#kontaktai">Kur įsigyti?</a></li>
           <li><a href="#kontaktai">Tapk prekybos partneriu</a></li>
@@ -709,6 +773,6 @@
 </footer>
 <div class="toast" data-toast role="status" aria-live="polite"><svg class="icon"><use href="#i-check"></use></svg><span data-toast-text></span></div>
 
-<script src="assets/js/main.js?v=12" defer></script>
+<script src="assets/js/main.js?v=13" defer></script>
 </body>
 </html>
