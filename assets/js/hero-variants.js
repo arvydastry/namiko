@@ -4,30 +4,6 @@
   var d = document;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- V1: karuselė ---------- */
-  d.querySelectorAll('[data-slider]').forEach(function (root) {
-    var slides = Array.prototype.slice.call(root.querySelectorAll('.hv1-slide'));
-    var dots = Array.prototype.slice.call(root.querySelectorAll('.hv1-dot'));
-    var counter = root.querySelector('[data-counter]');
-    var i = 0, timer = null, userTouched = false;
-    function show(n) {
-      i = (n + slides.length) % slides.length;
-      slides.forEach(function (s, k) { s.classList.toggle('is-active', k === i); s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
-      dots.forEach(function (dot, k) { dot.setAttribute('aria-current', k === i ? 'true' : 'false'); });
-      if (counter) counter.textContent = (i + 1) + ' / ' + slides.length;
-    }
-    function play() { if (reduce || userTouched) return; stop(); timer = setInterval(function () { show(i + 1); }, 6000); }
-    function stop() { if (timer) { clearInterval(timer); timer = null; } }
-    root.querySelectorAll('[data-dir]').forEach(function (b) {
-      b.addEventListener('click', function () { userTouched = true; stop(); show(i + (b.getAttribute('data-dir') === '-' ? -1 : 1)); });
-    });
-    dots.forEach(function (dot, k) { dot.addEventListener('click', function () { userTouched = true; stop(); show(k); }); });
-    root.addEventListener('mouseenter', stop);
-    root.addEventListener('mouseleave', play);
-    root.addEventListener('focusin', stop);
-    show(0); play();
-  });
-
   /* ---------- V2: skonio pasirinkimas ---------- */
   d.querySelectorAll('[data-picker]').forEach(function (root) {
     var stage = root.querySelector('.hv2-stage'), img = stage.querySelector('img');

@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=11">
+<link rel="stylesheet" href="assets/css/style.css?v=12">
 <link rel="preload" as="image" href="assets/img/pradedanciuju-new.png" fetchpriority="high">
 </head>
 <body class="has-mobile-cta">
@@ -23,31 +23,78 @@
 
 <main>
   <!-- ============ HERO: kas parduodama + kokia nauda ============ -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container">
-      <div class="hero-copy">
-        <span class="eyebrow">Fermentuota Lietuvoje<svg class="flag-lt" aria-hidden="true"><use href="#i-flag-lt"></use></svg> nuo 2005 m.</span>
-        <h1 class="h1" id="hero-title">Fermentuoti gėrimų koncentratai su <em>gyvomis gerosiomis bakterijomis</em></h1>
-        <p class="lead">Vienas arbatinis šaukštelis NAMIKO prie kiekvieno valgio – paprastas kasdienis įprotis geresniam virškinimui ir savijautai. Augalinis, be pridėtinio cukraus, be GMO ir glitimo.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary btn-lg" href="#prekes">Pirkti dabar <svg class="icon"><use href="#i-arrow"></use></svg></a>
-          <a class="btn btn-outline btn-lg" href="#kaip-vartoti">Kaip vartoti?</a>
-          <span class="muted">Nuo 9 € už buteliuką · užtenka ~1 mėnesiui</span>
+  <!-- ============ HERO: XStore karuselė (V1) ============ -->
+  <section class="hv1" id="hero" aria-roledescription="karuselė" aria-label="NAMIKO pasiūlymai" data-slider>
+    <div class="hv1-track">
+      <div class="hv1-slide is-active" role="group" aria-label="1 iš 3">
+        <div class="container">
+          <div class="hero-copy">
+            <span class="eyebrow">Fermentuota Lietuvoje<svg class="flag-lt" aria-hidden="true"><use href="#i-flag-lt"></use></svg> nuo 2005 m.</span>
+            <h1 class="h1" id="hero-title">Fermentuoti gėrimų koncentratai su <em>gyvomis gerosiomis bakterijomis</em></h1>
+            <p class="lead">Vienas arbatinis šaukštelis NAMIKO prie kiekvieno valgio – paprastas kasdienis įprotis geresniam virškinimui ir savijautai. Augalinis, be pridėtinio cukraus, be GMO ir glitimo.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary btn-lg" href="#prekes">Pirkti dabar <svg class="icon"><use href="#i-arrow"></use></svg></a>
+              <a class="btn btn-outline btn-lg" href="#kaip-vartoti">Kaip vartoti?</a>
+              <span class="muted">Nuo 9 € už buteliuką · užtenka ~1 mėnesiui</span>
+            </div>
+            <!-- DEMO DUOMENYS: įvertinimą ir atsiliepimų skaičių pakeisti tikrais -->
+            <p class="hero-rating"><span class="stars" aria-label="Įvertinimas 4,9 iš 5"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><b>4,9 iš 5</b><span>· 120+ pirkėjų atsiliepimų</span></p>
+            <ul class="hero-benefits">
+              <li class="hero-benefit"><svg class="icon"><use href="#i-truck"></use></svg><div><b>Nemokamas pristatymas</b><span>užsakymams nuo 35 €</span></div></li>
+              <li class="hero-benefit"><svg class="icon"><use href="#i-return"></use></svg><div><b>14 d. grąžinimas</b><span>be papildomų klausimų</span></div></li>
+              <li class="hero-benefit"><svg class="icon"><use href="#i-phone"></use></svg><div><b>Užsakymai telefonu</b><span>+370 632 01064</span></div></li>
+            </ul>
+          </div>
+          <div class="hero-visual">
+            <img class="hero-product" src="assets/img/pradedanciuju-new.png" alt="NAMIKO medaus ir avižų gėrimų koncentratai" width="1024" height="1024" fetchpriority="high">
+            <span class="hero-label hero-label--tl"><svg class="icon"><use href="#i-ban"></use></svg>Be pridėtinio cukraus</span>
+            <span class="hero-label hero-label--bl"><svg class="icon"><use href="#i-badge"></use></svg>Pagaminta Lietuvoje<svg class="flag-lt" aria-hidden="true"><use href="#i-flag-lt"></use></svg></span>
+          </div>
         </div>
-        <!-- DEMO DUOMENYS: įvertinimą ir atsiliepimų skaičių pakeisti tikrais -->
-        <p class="hero-rating"><span class="stars" aria-label="Įvertinimas 4,9 iš 5"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><b>4,9 iš 5</b><span>· 120+ pirkėjų atsiliepimų</span></p>
-        <ul class="hero-benefits">
-          <li class="hero-benefit"><svg class="icon"><use href="#i-truck"></use></svg><div><b>Nemokamas pristatymas</b><span>užsakymams nuo 35 €</span></div></li>
-          <li class="hero-benefit"><svg class="icon"><use href="#i-return"></use></svg><div><b>14 d. grąžinimas</b><span>be papildomų klausimų</span></div></li>
-          <li class="hero-benefit"><svg class="icon"><use href="#i-phone"></use></svg><div><b>Užsakymai telefonu</b><span>+370 632 01064</span></div></li>
-        </ul>
       </div>
-      <div class="hero-visual">
-        <img class="hero-product" src="assets/img/pradedanciuju-new.png" alt="NAMIKO fermentuoti medaus ir avižų gėrimų koncentratai, 2 buteliukai po 0,75 l" width="1024" height="1024" fetchpriority="high">
-        <span class="hero-label hero-label--tl"><svg class="icon"><use href="#i-ban"></use></svg>Be pridėtinio cukraus</span>
-        <span class="hero-label hero-label--bl"><svg class="icon"><use href="#i-badge"></use></svg>Pagaminta Lietuvoje<svg class="flag-lt" aria-hidden="true"><use href="#i-flag-lt"></use></svg></span>
+      <div class="hv1-slide hv1-slide--green" role="group" aria-label="2 iš 3" aria-hidden="true">
+        <div class="container">
+          <div class="hv1-promo">
+            <span><span class="badge badge-sale">Akcija</span></span>
+            <h2 class="h1">Rinkinys PRADEDANTIESIEMS: medaus + avižų</h2>
+            <p class="lead">Du švelniausi skoniai pažinčiai su NAMIKO. Užtenka maždaug dviem mėnesiams vienam žmogui.</p>
+            <div class="hv1-price"><span class="price">17,00 €</span><span class="price-old">18,00 €</span><span class="muted">2 × 0,75 l</span></div>
+            <ul>
+              <li><svg class="icon"><use href="#i-check"></use></svg>8,50 € už buteliuką</li>
+              <li><svg class="icon"><use href="#i-check"></use></svg>Be pridėtinio cukraus, GMO ir glitimo</li>
+            </ul>
+            <div class="hero-ctas"><button class="btn btn-primary btn-lg" type="button" data-add="Rinkinys PRADEDANTIESIEMS" data-price="17">Į krepšelį</button><a class="btn btn-outline btn-lg" href="#rinkiniai">Visi rinkiniai</a></div>
+          </div>
+          <div class="hero-visual">
+            <img class="hero-product" src="assets/img/pradedanciuju-new.png" alt="Rinkinys PRADEDANTIESIEMS" width="1024" height="1024" loading="lazy">
+            <span class="hero-label hero-label--tl"><svg class="icon"><use href="#i-percent"></use></svg>Sutaupote 1 €</span>
+          </div>
+        </div>
+      </div>
+      <div class="hv1-slide hv1-slide--honey" role="group" aria-label="3 iš 3" aria-hidden="true">
+        <div class="container">
+          <div class="hv1-promo">
+            <span><span class="badge badge-sale">Sutaupykite 5 €</span></span>
+            <h2 class="h1">Avižų rinkinys 6 × 0,75 l – pusmečiui arba visai šeimai</h2>
+            <p class="lead">Populiariausias skonis didesne pakuote. Pristatymas visoje Lietuvoje<svg class="flag-lt" aria-hidden="true"><use href="#i-flag-lt"></use></svg> – nemokamas.</p>
+            <div class="hv1-price"><span class="price">49,00 €</span><span class="price-old">54,00 €</span><span class="muted">8,17 € už buteliuką</span></div>
+            <div class="hero-ctas"><button class="btn btn-primary btn-lg" type="button" data-add="Avižų rinkinys 6 × 0,75 l" data-price="49">Į krepšelį</button><a class="btn btn-outline btn-lg" href="preke.html">Apie avižų koncentratą</a></div>
+          </div>
+          <div class="hero-visual">
+            <img class="hero-product" src="assets/img/Avizu62.png" alt="Avižų koncentratų rinkinys 6 × 0,75 l" width="1024" height="1024" loading="lazy">
+            <span class="hero-label hero-label--bl"><svg class="icon"><use href="#i-truck"></use></svg>Nemokamas pristatymas</span>
+          </div>
+        </div>
       </div>
     </div>
+    <button class="hv1-arrow hv1-arrow--prev" type="button" data-dir="-" aria-label="Ankstesnė skaidrė"><svg class="icon"><use href="#i-chev-l"></use></svg></button>
+    <button class="hv1-arrow hv1-arrow--next" type="button" data-dir="+" aria-label="Kita skaidrė"><svg class="icon"><use href="#i-chev-r"></use></svg></button>
+    <div class="hv1-dots" role="tablist" aria-label="Skaidrės">
+      <button class="hv1-dot" type="button" aria-current="true" aria-label="1 skaidrė"></button>
+      <button class="hv1-dot" type="button" aria-current="false" aria-label="2 skaidrė"></button>
+      <button class="hv1-dot" type="button" aria-current="false" aria-label="3 skaidrė"></button>
+    </div>
+    <span class="hv1-counter" data-counter>1 / 3</span>
   </section>
 
   <!-- ============ Kodėl pirkti iš NAMIKO – judanti privalumų juosta (marquee) ============ -->
@@ -469,6 +516,6 @@
 </div>
 
 {{footer}}
-<script src="assets/js/main.js?v=11" defer></script>
+<script src="assets/js/main.js?v=12" defer></script>
 </body>
 </html>

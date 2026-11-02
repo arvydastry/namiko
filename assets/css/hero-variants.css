@@ -11,37 +11,6 @@
 .hv-intro .container{padding-block:28px;display:grid;gap:8px}
 .hv-intro p{color:var(--ink-2);max-width:70ch}
 
-/* ---------- V1: XStore karuselė ---------- */
-.hv1{position:relative;background:var(--cream);border-bottom:1px solid var(--line-2);overflow:hidden}
-.hv1-track{display:grid}
-.hv1-slide{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .55s var(--ease),visibility 0s linear .55s}
-.hv1-slide.is-active{opacity:1;visibility:visible;transition:opacity .55s var(--ease)}
-.hv1-slide .container{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,72px);align-items:center;padding-block:clamp(40px,6vw,72px) clamp(72px,8vw,104px)}
-.hv1-slide--green{background:#E6EFDF}
-.hv1-slide--honey{background:#F8ECC8}
-.hv1-promo{display:flex;flex-direction:column;gap:18px;max-width:560px}
-.hv1-promo .h1{font-size:clamp(1.9rem,4vw,3.1rem)}
-.hv1-price{display:flex;align-items:baseline;gap:12px}
-.hv1-price .price{font-size:clamp(2.2rem,4vw,3rem);letter-spacing:-.03em}
-.hv1-price .price-old{font-size:1.25rem}
-.hv1-promo ul{display:grid;gap:8px;font-size:.9375rem;color:var(--ink-2)}
-.hv1-promo li{display:flex;gap:10px;align-items:flex-start}
-.hv1-promo li .icon{width:18px;height:18px;color:var(--green);margin-top:3px;flex:none}
-.hv1-arrow{position:absolute;top:50%;z-index:3;width:48px;height:48px;margin-top:-24px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;box-shadow:var(--shadow-sm);transition:background .2s,color .2s,border-color .2s}
-.hv1-arrow:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
-.hv1-arrow .icon{width:20px;height:20px}
-.hv1-arrow--prev{left:clamp(12px,2vw,28px)}
-.hv1-arrow--next{right:clamp(12px,2vw,28px)}
-.hv1-dots{position:absolute;left:50%;bottom:26px;z-index:3;display:flex;gap:8px;transform:translateX(-50%)}
-.hv1-dot{width:8px;height:8px;border-radius:999px;background:rgba(23,26,23,.25);transition:width .3s var(--ease),background .3s}
-.hv1-dot[aria-current="true"]{width:26px;background:var(--ink)}
-.hv1-counter{position:absolute;right:clamp(16px,2.5vw,36px);bottom:24px;z-index:3;font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--ink-3)}
-@media (max-width:960px){
-  .hv1-slide .container{grid-template-columns:minmax(0,1fr);padding-bottom:72px}
-  .hv1-slide .hero-visual{order:-1;max-width:none;justify-self:stretch;aspect-ratio:4/3}
-  .hv1-arrow{display:none}
-}
-
 /* ---------- V2: skonio pasirinkimas ---------- */
 .hv2{background:#fff;border-bottom:1px solid var(--line-2)}
 .hv2 .container{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(40px,6vw,72px)}
