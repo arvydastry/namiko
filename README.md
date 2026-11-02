@@ -90,7 +90,7 @@ Prekių pavadinimai, kainos, akcijos, rinkinių sudėtis, maistinė vertė, sud�
 | `assets/img/how-1.jpg` | Ksenia Chernaya | https://www.pexels.com/photo/photo-of-person-holding-spoon-4048706/ |
 | `assets/img/how-2.jpg` | Elena Leya | https://www.pexels.com/photo/food-on-yellow-and-red-bowl-9568317/ |
 | `assets/img/how-3.jpg` | olia danilevich | https://www.pexels.com/photo/a-woman-holding-a-water-with-lemon-9004761/ |
-| `assets/img/gift-hero.jpg` | Danik Prihodko | https://www.pexels.com/photo/young-woman-embracing-her-mother-17066525/ |
+| `assets/img/gift-hero.jpg` | cottonbro studio | https://www.pexels.com/photo/woman-in-white-sweater-holding-blue-ceramic-mug-5486105/ |
 
 Alternatyvos, jei norėsite keisti: 5947086 (pilamas baltas gėrimas iš buteliuko į stiklinę), 12788320 (šeimos pusryčiai), 7530825 (besišypsanti vyresnė moteris su stikline).
 
