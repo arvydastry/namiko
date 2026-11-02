@@ -1,5 +1,7 @@
 # NAMIKO – naujo el. parduotuvės dizaino versija (XStore stilistika)
 
+**Gyva peržiūra (GitHub Pages):** https://arvydastry.github.io/namiko/ · prekė: https://arvydastry.github.io/namiko/preke.html · pirkimas: https://arvydastry.github.io/namiko/pirkimas.html
+
 Statinis, naršyklėje atidaromas dizaino prototipas namiko.lt perdarymui. Trys puslapiai:
 
 | Failas | Puslapis |
