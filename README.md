@@ -22,7 +22,7 @@ ir eikite į http://localhost:8765/ (serverio konfigūracija yra `.claude/launch
 
 Esama svetainė (Astra + Elementor, pilkas hero, tamsiai žalia) neatsako į du klausimus per pirmas 3 sekundes: **kas parduodama** ir **kokia nauda pirkėjui**. Naujas dizainas:
 
-1. **Hero** iškart pasako: *fermentuoti gėrimų koncentratai su gyvomis gerosiomis bakterijomis*, nauda (šaukštelis prie kiekvieno valgio – virškinimui ir savijautai), kaina („nuo 9 €, užtenka ~1 mėn.“) ir du CTA: *Pirkti dabar* / *Kaip vartoti?*. Produkto nuotrauka su „Be pridėtinio cukraus / Gyvos bakterijos / Pagaminta Lietuvoje“ žymomis.
+1. **Hero** iškart pasako: *fermentuoti gėrimų koncentratai su gyvomis gerosiomis bakterijomis*, nauda (šaukštelis prie kiekvieno valgio – virškinimui ir savijautai), kaina („nuo 9 €, užtenka ~1 mėn.“) ir du CTA: *Pirkti dabar* / *Kaip vartoti?*. Produkto nuotrauka baltame bloke ant lygaus žalsvo apskritimo su dviem plokščiomis etiketėmis („Be pridėtinio cukraus“, „Pagaminta Lietuvoje“) – be morfuojančių formų, stiklo efektų ar švytėjimų.
 2. **Judanti privalumų juosta „Kodėl pirkti iš NAMIKO“** – tamsi juosta su stiklinėmis kortelėmis, kurios nepertraukiamai slenka (marquee, ~60 px/s, sustoja užvedus pelę ar fokusuojant, su `prefers-reduced-motion` tampa statine eilute). Kortelės: unikalus receptas nuo 2005 m., gaminama ūkyje Kaišiadorių r., perkant daugiau – pigiau, užsakymas per 1 minutę, prenumerata kas mėnesį, nemokamas pristatymas nuo 35 €. Techniškai: `.marquee` + `.marquee-track`, sąrašą JS dubliuoja (`aria-hidden`), greitis skaičiuojamas pagal plotį.
 3. **Kaip tai veikia – 1-2-3** (suplakti → šaukštelis prie kiekvieno valgio → gerosios bakterijos dirba). Trys 4:5 nuotraukų kortelės iš Pexels su numeriu, stikliniu „chip“ (1 arbatinis šaukštelis / pusryčiai · pietūs · vakarienė / 1 buteliukas ≈ 1 mėnuo), hover priartinimu ir punktyrine jungtimi; mobiliame – kompaktiškos eilutės (nuotrauka kairėje, tekstas dešinėje). Nuotraukos `assets/img/how-1..3.jpg` (Pexels licencija, autoriai: Ksenia Chernaya, Elena Leya, olia danilevich – nuorodos žemiau).
 4. **Populiariausi koncentratai** – XStore stiliaus prekių kortelės (ženkliukai, norų sąrašas/greita peržiūra ant hover, kaina + „≈ 0,30 €/dienai“, „Į krepšelį“).
@@ -41,8 +41,10 @@ Pirkimo procesas: **vienas puslapis, be registracijos** (svečio pirkimas), 3 ž
 - **Spalvos:** `--ink #171A17` (tekstas, tamsūs XStore mygtukai), `--green #3E7A3A` (prekės ženklo žalia – kitokia nei dabartinė #0E6E0E), `--honey #E8A921` (medaus akcentas), `--cream #F7F3EB` (šiltos sekcijos), `--sale #D23F31` (akcijų ženkliukai).
 - **Mygtukai:** XStore stiliaus – kvadratiški (4 px), uppercase, 0.1em tarpai; pagrindinis – žalias, antrinis – tamsus/kontūrinis.
 - **Komponentai:** viršutinė promo juosta, antraštė su paieška ir kategorijų pasirinkimu, ikonos (paskyra / norų sąrašas / krepšelis su skaitikliu ir suma), meniu su HOT ženkleliu, prekių kortelės, ženkliukai, features juosta, lipni add-to-cart juosta, 3 žingsnių checkout juosta.
-- **Judesys:** švelnūs „reveal“ efektai slenkant, plūduriuojanti hero nuotrauka, hover efektai. Viskas išjungiama su `prefers-reduced-motion`.
+- **Flat, XStore principai:** be gradientų, švytėjimų ir permatomų (glass) paviršių; kampų spinduliai tik 3 / 8 / 12 px; šešėliai tik ant nuotraukų ir hover būsenose; vientisa balta lipni antraštė; sekcijų antraštės centruotos, po tinkleliais – kontūrinis „Visos prekės“ mygtukas.
+- **Judesys:** švelnūs „reveal“ efektai slenkant, judanti privalumų juosta, nuotraukų priartinimas hover metu. Viskas išjungiama su `prefers-reduced-motion`.
 - Mobilioji versija: patikrinta 375 px pločiu (be horizontalaus slinkimo), hamburger meniu, lipnus „Pirkti dabar“ CTA.
+- Pixel-perfect patikra (1400 px): prekių kortelių ir rinkinių mygtukai eilutėse lygiuoja 0 px nuokrypiu, atsiliepimų ir juostos kortelės vienodo aukščio, mygtukų aukščiai tik 40 / 48 / 56 px, h2 dydis vienodas visose sekcijose.
 
 ## Struktūra
 

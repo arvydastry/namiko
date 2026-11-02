@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=10">
+<link rel="stylesheet" href="assets/css/style.css?v=11">
 <link rel="preload" as="image" href="assets/img/pradedanciuju-new.png" fetchpriority="high">
 </head>
 <body class="has-mobile-cta">
@@ -34,6 +34,8 @@
           <a class="btn btn-outline btn-lg" href="#kaip-vartoti">Kaip vartoti?</a>
           <span class="muted">Nuo 9 € už buteliuką · užtenka ~1 mėnesiui</span>
         </div>
+        <!-- DEMO DUOMENYS: įvertinimą ir atsiliepimų skaičių pakeisti tikrais -->
+        <p class="hero-rating"><span class="stars" aria-label="Įvertinimas 4,9 iš 5"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><b>4,9 iš 5</b><span>· 120+ pirkėjų atsiliepimų</span></p>
         <ul class="hero-benefits">
           <li class="hero-benefit"><svg class="icon"><use href="#i-truck"></use></svg><div><b>Nemokamas pristatymas</b><span>užsakymams nuo 35 €</span></div></li>
           <li class="hero-benefit"><svg class="icon"><use href="#i-return"></use></svg><div><b>14 d. grąžinimas</b><span>be papildomų klausimų</span></div></li>
@@ -41,13 +43,9 @@
         </ul>
       </div>
       <div class="hero-visual">
-        <div class="hero-blob" aria-hidden="true"></div>
         <img class="hero-product" src="assets/img/pradedanciuju-new.png" alt="NAMIKO fermentuoti medaus ir avižų gėrimų koncentratai, 2 buteliukai po 0,75 l" width="1024" height="1024" fetchpriority="high">
-        <div class="hero-tag hero-tag--1"><svg class="icon"><use href="#i-ban"></use></svg><div>Be pridėtinio cukraus<small>saldumas – iš fermentacijos</small></div></div>
-        <div class="hero-tag hero-tag--2"><svg class="icon"><use href="#i-sparkles"></use></svg><div>Gyvos bakterijos<small>100 % augalinis raugas</small></div></div>
-        <div class="hero-tag hero-tag--3"><svg class="icon"><use href="#i-badge"></use></svg><div>Pagaminta Lietuvoje<svg class="flag-lt" aria-hidden="true"><use href="#i-flag-lt"></use></svg><small>Kaišiadorių r.</small></div></div>
-        <!-- DEMO DUOMENYS: įvertinimą ir atsiliepimų skaičių pakeisti tikrais -->
-        <div class="hero-rating"><b>4,9 / 5</b><span class="stars" aria-hidden="true">★★★★★</span><small>120+ pirkėjų atsiliepimų</small></div>
+        <span class="hero-label hero-label--tl"><svg class="icon"><use href="#i-ban"></use></svg>Be pridėtinio cukraus</span>
+        <span class="hero-label hero-label--bl"><svg class="icon"><use href="#i-badge"></use></svg>Pagaminta Lietuvoje<svg class="flag-lt" aria-hidden="true"><use href="#i-flag-lt"></use></svg></span>
       </div>
     </div>
   </section>
@@ -90,9 +88,9 @@
   <section class="section section-cream" id="kaip-vartoti" aria-labelledby="how-title">
     <div class="container">
       <div class="section-head section-head--center reveal">
-        <span class="eyebrow">Paprasta kaip 1-2-3</span>
-        <h2 class="h2" id="how-title">Šaukštelis prie kiekvieno valgio – ir tiek</h2>
-        <p class="lead">NAMIKO nėra vaistas ar papildas, kurį reikia „dozuoti“. Tai fermentuotas maisto produktas, kurį tiesiog įpilate į maistą arba gėrimą.</p>
+        <span class="eyebrow">Vartojimas</span>
+        <h2 class="h2" id="how-title">Kaip vartoti NAMIKO</h2>
+        <p class="lead">NAMIKO – fermentuotas maisto produktas, ne vaistas: jo nereikia dozuoti. Tiesiog įpilkite į maistą arba gėrimą prie kiekvieno valgio.</p>
       </div>
       <ol class="how">
         <li class="how-step reveal" data-delay="1">
@@ -121,7 +119,7 @@
           <figure class="how-media">
             <img src="assets/img/how-3.jpg" alt="Moteris šviesioje virtuvėje su stikline gėrimo" loading="lazy" width="800" height="1200">
             <span class="how-num" aria-hidden="true">03</span>
-            <span class="how-chip"><svg class="icon"><use href="#i-sparkles"></use></svg>1 buteliukas ≈ 1 mėnuo</span>
+            <span class="how-chip"><svg class="icon"><use href="#i-glass"></use></svg>1 buteliukas ≈ 1 mėnuo</span>
           </figure>
           <div class="how-body">
             <h3>Leiskite gerosioms bakterijoms dirbti</h3>
@@ -141,12 +139,10 @@
   <!-- ============ Populiariausios prekės ============ -->
   <section class="section" id="prekes" aria-labelledby="prod-title">
     <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <span class="eyebrow">El. parduotuvė</span>
-          <h2 class="h2" id="prod-title">Populiariausi koncentratai</h2>
-        </div>
-        <a class="link" href="#prekes">Visos 19 prekių <svg class="icon"><use href="#i-arrow"></use></svg></a>
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">El. parduotuvė</span>
+        <h2 class="h2" id="prod-title">Populiariausi koncentratai</h2>
+        <p class="lead">12 skonių po 750 ml, nuo 9 € – visi be pridėtinio cukraus, GMO ir glitimo.</p>
       </div>
       <!-- DEMO DUOMENYS: žvaigždutės ir atsiliepimų skaičiai – pakeisti tikrais -->
       <div class="grid-products">
@@ -161,7 +157,7 @@
             <span class="product-cat">Koncentratas · 750 ml</span>
             <h3 class="product-title"><a href="preke.html">Fermentuotas <b>AVIŽŲ</b> gėrimo koncentratas</a></h3>
             <div class="product-meta"><span class="stars" aria-label="Įvertinimas 5 iš 5"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><span>(37)</span></div>
-            <div class="product-price"><span class="price">9,00 €</span><span class="price-unit">≈ 0,30 €/dienai</span></div>
+            <div class="product-price"><span class="price">9,00 €</span></div>
             <div class="product-cta"><button class="btn btn-outline btn-sm" type="button" data-add="Avižų koncentratas 750 ml" data-price="9">Į krepšelį</button></div>
           </div>
         </article>
@@ -175,7 +171,7 @@
             <span class="product-cat">Koncentratas · 750 ml</span>
             <h3 class="product-title"><a href="preke.html">Fermentuotas <b>MEDAUS</b> gėrimo koncentratas</a></h3>
             <div class="product-meta"><span class="stars"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><span>(24)</span></div>
-            <div class="product-price"><span class="price">9,00 €</span><span class="price-unit">≈ 0,30 €/dienai</span></div>
+            <div class="product-price"><span class="price">9,00 €</span></div>
             <div class="product-cta"><button class="btn btn-outline btn-sm" type="button" data-add="Medaus koncentratas 750 ml" data-price="9">Į krepšelį</button></div>
           </div>
         </article>
@@ -189,7 +185,7 @@
             <span class="product-cat">Koncentratas · 750 ml</span>
             <h3 class="product-title"><a href="preke.html">Fermentuotas <b>GRIKIŲ</b> gėrimo koncentratas</a></h3>
             <div class="product-meta"><span class="stars"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><span>(19)</span></div>
-            <div class="product-price"><span class="price">9,00 €</span><span class="price-unit">≈ 0,30 €/dienai</span></div>
+            <div class="product-price"><span class="price">9,00 €</span></div>
             <div class="product-cta"><button class="btn btn-outline btn-sm" type="button" data-add="Grikių koncentratas 750 ml" data-price="9">Į krepšelį</button></div>
           </div>
         </article>
@@ -203,44 +199,42 @@
             <span class="product-cat">Koncentratas · 750 ml</span>
             <h3 class="product-title"><a href="preke.html">Fermentuotas <b>RYŽIŲ</b> gėrimo koncentratas</a></h3>
             <div class="product-meta"><span class="stars"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><span>(11)</span></div>
-            <div class="product-price"><span class="price">9,00 €</span><span class="price-unit">≈ 0,30 €/dienai</span></div>
+            <div class="product-price"><span class="price">9,00 €</span></div>
             <div class="product-cta"><button class="btn btn-outline btn-sm" type="button" data-add="Ryžių koncentratas 750 ml" data-price="9">Į krepšelį</button></div>
           </div>
         </article>
 
         <article class="product reveal" data-delay="1">
           <div class="product-media">
-            <div class="product-badges"><span class="badge badge-honey">Uogų</span></div>
-            <div class="product-actions"><button type="button" aria-label="Į norų sąrašą" data-wish><svg class="icon"><use href="#i-heart"></use></svg></button><button type="button" aria-label="Greita peržiūra"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
+                        <div class="product-actions"><button type="button" aria-label="Į norų sąrašą" data-wish><svg class="icon"><use href="#i-heart"></use></svg></button><button type="button" aria-label="Greita peržiūra"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
             <img src="assets/img/avieciu2.png" alt="NAMIKO fermentuotas avižų gėrimo koncentratas su avietėmis, 750 ml" width="1024" height="1024" loading="lazy">
           </div>
           <div class="product-body">
-            <span class="product-cat">Koncentratas · 750 ml</span>
+            <span class="product-cat">Uogų koncentratas · 750 ml</span>
             <h3 class="product-title"><a href="preke.html">Avižų koncentratas su <b>AVIETĖMIS</b></a></h3>
             <div class="product-meta"><span class="stars"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><span>(16)</span></div>
-            <div class="product-price"><span class="price">10,50 €</span><span class="price-unit">≈ 0,35 €/dienai</span></div>
+            <div class="product-price"><span class="price">10,50 €</span></div>
             <div class="product-cta"><button class="btn btn-outline btn-sm" type="button" data-add="Avižų koncentratas su avietėmis" data-price="10.5">Į krepšelį</button></div>
           </div>
         </article>
 
         <article class="product reveal" data-delay="2">
           <div class="product-media">
-            <div class="product-badges"><span class="badge badge-honey">Uogų</span></div>
-            <div class="product-actions"><button type="button" aria-label="Į norų sąrašą" data-wish><svg class="icon"><use href="#i-heart"></use></svg></button><button type="button" aria-label="Greita peržiūra"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
+                        <div class="product-actions"><button type="button" aria-label="Į norų sąrašą" data-wish><svg class="icon"><use href="#i-heart"></use></svg></button><button type="button" aria-label="Greita peržiūra"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
             <img src="assets/img/saltalankiu2.png" alt="NAMIKO fermentuotas avižų gėrimo koncentratas su šaltalankiais, 750 ml" width="1024" height="1024" loading="lazy">
           </div>
           <div class="product-body">
-            <span class="product-cat">Koncentratas · 750 ml</span>
+            <span class="product-cat">Uogų koncentratas · 750 ml</span>
             <h3 class="product-title"><a href="preke.html">Avižų koncentratas su <b>ŠALTALANKIAIS</b></a></h3>
             <div class="product-meta"><span class="stars"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><span>(13)</span></div>
-            <div class="product-price"><span class="price">10,50 €</span><span class="price-unit">≈ 0,35 €/dienai</span></div>
+            <div class="product-price"><span class="price">10,50 €</span></div>
             <div class="product-cta"><button class="btn btn-outline btn-sm" type="button" data-add="Avižų koncentratas su šaltalankiais" data-price="10.5">Į krepšelį</button></div>
           </div>
         </article>
 
         <article class="product reveal" data-delay="3">
           <div class="product-media">
-            <div class="product-badges"><span class="badge badge-new">Turboraugas</span></div>
+            <div class="product-badges"><span class="badge badge-soft">Turboraugas</span></div>
             <div class="product-actions"><button type="button" aria-label="Į norų sąrašą" data-wish><svg class="icon"><use href="#i-heart"></use></svg></button><button type="button" aria-label="Greita peržiūra"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
             <img src="assets/img/aroniju6.png" alt="NAMIKO Turboraugas fermentuotas avižų gėrimo koncentratas su aronijomis, 750 ml" width="1024" height="1024" loading="lazy">
           </div>
@@ -248,27 +242,27 @@
             <span class="product-cat">Turboraugas · 750 ml</span>
             <h3 class="product-title"><a href="preke.html">Avižų koncentratas su <b>ARONIJOMIS</b></a></h3>
             <div class="product-meta"><span class="stars"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><span>(9)</span></div>
-            <div class="product-price"><span class="price">10,50 €</span><span class="price-unit">≈ 0,35 €/dienai</span></div>
+            <div class="product-price"><span class="price">10,50 €</span></div>
             <div class="product-cta"><button class="btn btn-outline btn-sm" type="button" data-add="Turboraugas su aronijomis" data-price="10.5">Į krepšelį</button></div>
           </div>
         </article>
 
         <article class="product reveal" data-delay="4">
           <div class="product-media">
-            <div class="product-badges"><span class="badge badge-soft">Padažas</span></div>
-            <div class="product-actions"><button type="button" aria-label="Į norų sąrašą" data-wish><svg class="icon"><use href="#i-heart"></use></svg></button><button type="button" aria-label="Greita peržiūra"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
+                        <div class="product-actions"><button type="button" aria-label="Į norų sąrašą" data-wish><svg class="icon"><use href="#i-heart"></use></svg></button><button type="button" aria-label="Greita peržiūra"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
             <img src="assets/img/burokeliai.png" alt="NAMIKO fermentuotas burokėlių padažas, 750 ml" width="1024" height="1024" loading="lazy">
           </div>
           <div class="product-body">
             <span class="product-cat">Padažas · 750 ml</span>
             <h3 class="product-title"><a href="preke.html">Fermentuotas <b>BUROKĖLIŲ</b> padažas</a></h3>
             <div class="product-meta"><span class="stars"><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg></span><span>(21)</span></div>
-            <div class="product-price"><span class="price">10,50 €</span><span class="price-unit">≈ 0,35 €/dienai</span></div>
+            <div class="product-price"><span class="price">10,50 €</span></div>
             <div class="product-cta"><button class="btn btn-outline btn-sm" type="button" data-add="Burokėlių padažas 750 ml" data-price="10.5">Į krepšelį</button></div>
           </div>
         </article>
 
       </div>
+      <p class="section-more reveal"><a class="btn btn-outline" href="#prekes">Visos 19 prekių</a></p>
     </div>
   </section>
 
@@ -308,11 +302,11 @@
           <div class="section-head reveal" style="margin-bottom:22px">
             <div>
               <span class="eyebrow">Kodėl NAMIKO</span>
-              <h2 class="h2" id="why-title">Natūralus raugas, kurį supranta ir skrandis, ir skonio receptoriai</h2>
+              <h2 class="h2" id="why-title">Kodėl rinktis NAMIKO</h2>
             </div>
           </div>
           <div class="why-grid">
-            <div class="why-item reveal" data-delay="1"><svg class="icon"><use href="#i-sparkles"></use></svg><div><b>Gyvos gerosios bakterijos</b><span>Biologiškai aktyvių rūgimą atliekančių mikroorganizmų kultūros kiekviename buteliuke.</span></div></div>
+            <div class="why-item reveal" data-delay="1"><svg class="icon"><use href="#i-flask"></use></svg><div><b>Gyvos gerosios bakterijos</b><span>Biologiškai aktyvių rūgimą atliekančių mikroorganizmų kultūros kiekviename buteliuke.</span></div></div>
             <div class="why-item reveal" data-delay="2"><svg class="icon"><use href="#i-ban"></use></svg><div><b>Be pridėtinio cukraus</b><span>Švelnus saldumas gimsta fermentacijos metu – be sirupų ir saldiklių.</span></div></div>
             <div class="why-item reveal" data-delay="3"><svg class="icon"><use href="#i-wheat"></use></svg><div><b>Be GMO, be laktozės, be glitimo</b><span>Patvirtinta laboratorinių tyrimų ataskaitomis – rasite prie kiekvienos prekės.</span></div></div>
             <div class="why-item reveal" data-delay="4"><svg class="icon"><use href="#i-leaf"></use></svg><div><b>100 % augalinis</b><span>Avižos, grikiai, ryžiai, medus, uogos, vanduo ir raugas. Tinka veganams.</span></div></div>
@@ -328,12 +322,10 @@
   <!-- ============ Rinkiniai ============ -->
   <section class="section" id="rinkiniai" aria-labelledby="sets-title">
     <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <span class="eyebrow">Taupiau rinkiniu</span>
-          <h2 class="h2" id="sets-title">Rinkiniai: daugiau skonių, mažesnė kaina</h2>
-        </div>
-        <p class="muted">Visuose rinkiniuose taikoma nuolaida, o perkant nuo 35 € – pristatymas nemokamas.</p>
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">Rinkiniai</span>
+        <h2 class="h2" id="sets-title">Rinkiniai: daugiau skonių, mažesnė kaina</h2>
+        <p class="lead">Visiems rinkiniams taikoma nuolaida, o nuo 35 € pristatymas nemokamas.</p>
       </div>
       <div class="sets">
         <article class="set set--featured reveal" data-delay="1">
@@ -388,19 +380,16 @@
           <button class="btn btn-outline" type="button" data-add="Rinkinys ŠEIMAI" data-price="44">Į krepšelį</button>
         </article>
       </div>
-      <p class="reveal" style="margin-top:22px;text-align:center"><a class="link" href="#rinkiniai">Visi 7 rinkiniai, įskaitant avižų 3× ir 6× <svg class="icon"><use href="#i-arrow"></use></svg></a></p>
+      <p class="section-more reveal"><a class="btn btn-outline" href="#rinkiniai">Visi 7 rinkiniai</a></p>
     </div>
   </section>
 
   <!-- ============ Atsiliepimai ============ -->
   <section class="section section-cream" id="atsiliepimai" aria-labelledby="rev-title">
     <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <span class="eyebrow">Pirkėjų patirtys</span>
-          <h2 class="h2" id="rev-title">Ką sako vartojantys NAMIKO</h2>
-        </div>
-        <a class="link" href="#atsiliepimai">Visi atsiliepimai <svg class="icon"><use href="#i-arrow"></use></svg></a>
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">Atsiliepimai</span>
+        <h2 class="h2" id="rev-title">Ką sako vartojantys NAMIKO</h2>
       </div>
       <!-- Ištraukos iš atsiliepimų, publikuojamų namiko.lt -->
       <div class="reviews">
@@ -420,6 +409,7 @@
           <footer><span class="review-avatar">L</span><div><b>Laima P.</b><span class="review-verified"><svg class="icon"><use href="#i-badge"></use></svg>Atsiliepimas iš namiko.lt</span></div></footer>
         </article>
       </div>
+      <p class="section-more reveal"><a class="btn btn-outline" href="#atsiliepimai">Visi atsiliepimai</a></p>
     </div>
   </section>
 
@@ -479,6 +469,6 @@
 </div>
 
 {{footer}}
-<script src="assets/js/main.js?v=10" defer></script>
+<script src="assets/js/main.js?v=11" defer></script>
 </body>
 </html>
