@@ -235,8 +235,8 @@ ul{margin:0;padding:0;list-style:none}
 .usp-list{display:flex;gap:14px;margin-right:14px;padding:0;align-items:stretch}
 .usp-item{flex:none;display:flex;gap:14px;align-items:center;width:clamp(280px,25vw,350px);padding:14px 18px 14px 14px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.05);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .3s,border-color .3s,transform .3s var(--ease)}
 .usp-item:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.24);transform:translateY(-2px)}
-.usp-icon{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:linear-gradient(145deg,#4F9449,var(--green-700));color:#fff;box-shadow:0 10px 22px -10px rgba(79,148,73,.9),inset 0 1px 0 rgba(255,255,255,.18)}
-.usp-icon .icon{width:22px;height:22px}
+.usp-item .usp-icon{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:linear-gradient(145deg,#4F9449,var(--green-700));color:#fff;box-shadow:0 10px 22px -10px rgba(79,148,73,.9),inset 0 1px 0 rgba(255,255,255,.2);font-size:0;line-height:0}
+.usp-item .usp-icon .icon{width:24px;height:24px;display:block}
 .usp-item b{display:block;font-size:.9375rem;line-height:1.2;margin-bottom:4px;letter-spacing:-.01em;color:#fff}
 .usp-item span{display:block;font-size:.78rem;color:rgba(255,255,255,.66);line-height:1.35}
 .usp-item a{font-weight:700;color:var(--honey);text-decoration:none}
@@ -248,7 +248,7 @@ html.no-js .marquee-track{animation:none}
   .usp-list{flex-wrap:wrap;justify-content:center;margin-right:0}
   .usp-list[aria-hidden="true"]{display:none}
 }
-@media (max-width:560px){.marquee{padding-block:14px}.usp-item{width:272px;padding:12px;gap:12px}.usp-icon{width:40px;height:40px}}
+@media (max-width:560px){.marquee{padding-block:14px}.usp-item{width:272px;padding:12px;gap:12px}.usp-item .usp-icon{width:42px;height:42px}.usp-item .usp-icon .icon{width:21px;height:21px}}
 
 /* ---------- Kaip veikia – 3 žingsniai su nuotraukomis (Pexels) ---------- */
 .step-num{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:1.05rem;margin-bottom:18px}
