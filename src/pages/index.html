@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=13">
+<link rel="stylesheet" href="assets/css/style.css?v=14">
 <link rel="preload" as="image" href="assets/img/pradedanciuju-new.png" fetchpriority="high">
 </head>
 <body class="has-mobile-cta">
@@ -26,7 +26,7 @@
   <!-- ============ HERO: XStore karuselė (V1) ============ -->
   <section class="hv1" id="hero" aria-roledescription="karuselė" aria-label="NAMIKO pasiūlymai" data-slider>
     <div class="hv1-track">
-      <div class="hv1-slide is-active" role="group" aria-label="1 iš 3">
+      <div class="hv1-slide is-active" role="group" aria-label="1 iš 4">
         <div class="container">
           <div class="hero-copy">
             <span class="eyebrow">Fermentuota Lietuvoje<svg class="flag-lt" aria-hidden="true"><use href="#i-flag-lt"></use></svg> nuo 2005 m.</span>
@@ -52,7 +52,32 @@
           </div>
         </div>
       </div>
-      <div class="hv1-slide hv1-slide--green" role="group" aria-label="2 iš 3" aria-hidden="true">
+      <div class="hv1-slide hv1-slide--gift" role="group" aria-label="2 iš 4" aria-hidden="true">
+        <div class="container">
+          <div class="hv1-promo">
+            <span><span class="badge badge-soft">Dovanų prenumerata</span></span>
+            <h2 class="h1">Padovanok sveikatą artimajam</h2>
+            <p class="lead">NAMIKO rinkinys kas mėnesį atkeliauja jūsų artimajam – su dovanų kortele ir jūsų palinkėjimu. Jūs pasirenkate rinkinį ir trukmę, visa kita – mūsų rūpestis.</p>
+            <div class="hv1-price"><span class="price">nuo 15,30 €</span><span class="muted">per mėnesį · 3, 6 arba 12 mėn.</span></div>
+            <ul>
+              <li><svg class="icon"><use href="#i-check"></use></svg>Dovanų kortelė su jūsų palinkėjimu – nemokamai</li>
+              <li><svg class="icon"><use href="#i-check"></use></svg>Nemokamas pristatymas kiekvieną mėnesį</li>
+              <li><svg class="icon"><use href="#i-check"></use></svg>Sustabdoma bet kada, be įsipareigojimų</li>
+            </ul>
+            <div class="hero-ctas"><a class="btn btn-primary btn-lg" href="#dovana">Sudaryti dovaną <svg class="icon"><use href="#i-arrow"></use></svg></a><a class="btn btn-outline btn-lg" href="#dovana">Kaip tai veikia?</a></div>
+          </div>
+          <div class="hero-visual hero-visual--photo">
+            <img class="hero-photo" src="assets/img/gift-hero.jpg" alt="Dukra švelniai apkabina mamą – rūpestis artimuoju" width="1200" height="1800" loading="lazy">
+            <span class="hero-label hero-label--tl"><svg class="icon"><use href="#i-gift"></use></svg>Su dovanų kortele</span>
+            <div class="hero-giftcard">
+              <img src="assets/img/pradedanciuju-new.png" alt="" width="1024" height="1024" loading="lazy">
+              <div><b>Rinkinys kas mėnesį</b><small>PRADEDANTIESIEMS · 6 mėn. · pristatymas nemokamas</small></div>
+              <span class="price">15,30 €<small>/mėn.</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hv1-slide hv1-slide--green" role="group" aria-label="3 iš 4" aria-hidden="true">
         <div class="container">
           <div class="hv1-promo">
             <span><span class="badge badge-sale">Akcija</span></span>
@@ -71,7 +96,7 @@
           </div>
         </div>
       </div>
-      <div class="hv1-slide hv1-slide--honey" role="group" aria-label="3 iš 3" aria-hidden="true">
+      <div class="hv1-slide hv1-slide--honey" role="group" aria-label="4 iš 4" aria-hidden="true">
         <div class="container">
           <div class="hv1-promo">
             <span><span class="badge badge-sale">Sutaupykite 5 €</span></span>
@@ -93,8 +118,9 @@
       <button class="hv1-dot" type="button" aria-current="true" aria-label="1 skaidrė"></button>
       <button class="hv1-dot" type="button" aria-current="false" aria-label="2 skaidrė"></button>
       <button class="hv1-dot" type="button" aria-current="false" aria-label="3 skaidrė"></button>
+      <button class="hv1-dot" type="button" aria-current="false" aria-label="4 skaidrė"></button>
     </div>
-    <span class="hv1-counter" data-counter>1 / 3</span>
+    <span class="hv1-counter" data-counter>1 / 4</span>
   </section>
 
   <!-- ============ Kodėl pirkti iš NAMIKO – judanti privalumų juosta (marquee) ============ -->
@@ -578,6 +604,6 @@
 </div>
 
 {{footer}}
-<script src="assets/js/main.js?v=13" defer></script>
+<script src="assets/js/main.js?v=14" defer></script>
 </body>
 </html>
